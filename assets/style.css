@@ -1,0 +1,47 @@
+.fightarea {
+    display: flex;
+    gap: 20px;
+}
+
+#char,
+#monster {
+    flex: 1;
+}
+
+.lifebar {
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+.lifebar .bar {
+    height: inherit;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.bararea {
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bararea .bar {
+    height: inherit;
+    background-color: darkviolet;
+    border-radius: 5px;
+}
+
+.log {
+    border: 1px dotted white;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.ButtonHeal, 
+.attackButton {
+    display: inline-block;
+    margin-right: 10px;
+}
