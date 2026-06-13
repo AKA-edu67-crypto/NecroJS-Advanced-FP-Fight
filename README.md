@@ -65,6 +65,28 @@ summon: {
     defense: 3
 }
 ```
+```javascript
+//Summon restriction for the Necromancer class.
+const summonEl = this.fighter1El.querySelector("#summon")
+        if(this.fighter1.type === "necromancer" && this.fighter1.summon) {
+            const summon = this.fighter1.summon
+            summonEl.style.display = "block"
+
+            if(summon.life > 0) {
+
+            summonEl.querySelector(".name").innerHTML = `${summon.name} - ${summon.life.toFixed(1)} HP`
+            let summonPct = (summon.life / summon.maxlife) * 100
+            summonEl.querySelector(".bar").style.width = `${summonPct}%`
+            summonEl.querySelector(".bararea").style.display = "block"
+            } else {
+                summonEl.querySelector(".name").innerHTML = `${summon.name} Is Out Of Battle`
+                summonEl.querySelector(".bar").style.width = "0%"
+                summonEl.querySelector(".bararea").style.display = "none"
+            }
+        } else {
+            summonEl.style.display = "none"
+        }
+```
 
 ---
 
